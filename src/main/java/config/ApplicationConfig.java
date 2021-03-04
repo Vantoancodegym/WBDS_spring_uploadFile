@@ -91,11 +91,9 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter implements Applic
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
         String fileUpload = env.getProperty("file_upload").toString();
-        String fileDownload = env.getProperty("file_download").toString();
-
         // Image resource.
         registry.addResourceHandler("/i/**")//
-                .addResourceLocations("file:" + fileUpload).addResourceLocations("file:" + fileDownload);
+                .addResourceLocations("file:" + fileUpload);
     }
 
     @Override

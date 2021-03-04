@@ -44,7 +44,7 @@ public class StudentController {
         MultipartFile[] files = s.getAvatar();
 
         List<String> avatar=new ArrayList<>();
-        String thu_muc = environment.getProperty("file_download").toString();
+        String thu_muc = environment.getProperty("file_upload").toString();
         System.out.println(thu_muc);
         for (MultipartFile f:files) {
             avatar.add(f.getOriginalFilename());
